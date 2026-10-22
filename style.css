@@ -1,0 +1,117 @@
+:root{--blue:#1b5e9c;--link:#1a73c7;--sky:#cfe6f7;--ink:#1d2733;--muted:#5b6b7b;--line:#dbe5ee;--bg:#f3f7fb;--card:#fff;--green:#7cc243;--yellow:#f6b800}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+a{color:var(--link)}
+img{max-width:100%;height:auto;border-radius:8px}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:20;background:#fff;box-shadow:0 1px 0 var(--line)}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:6px 16px;background:var(--blue);font-size:13px}
+.topbar a,.topbar{color:#fff;text-decoration:none}
+.topbar b{font-weight:600}
+.lang a{color:#cfe6f7}
+.bar{display:flex;align-items:center;justify-content:space-between;padding:8px 16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:700;font-size:13px;line-height:1.15;letter-spacing:.04em}
+.logo svg{width:52px;height:32px}
+.burger{width:44px;height:44px;border:0;background:none;display:flex;flex-direction:column;justify-content:center;gap:5px;padding:10px;cursor:pointer}
+.burger i{display:block;height:2px;background:var(--ink);border-radius:2px;transition:.2s}
+.open .burger i:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.open .burger i:nth-child(2){opacity:0}
+.open .burger i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.tabs{display:flex;border-top:1px solid var(--line)}
+.tabs a{flex:1;text-align:center;padding:10px 4px;font-size:13px;font-weight:700;text-transform:uppercase;text-decoration:none;color:var(--blue)}
+.tabs a.on{background:linear-gradient(#eaf6df,#d3edbd);color:#2d5a12}
+
+/* drawer */
+.drawer{position:fixed;inset:0;top:0;z-index:15;background:#fff;padding:170px 16px 40px;overflow-y:auto;transform:translateY(-100%);transition:transform .25s ease;visibility:hidden}
+.open .drawer{transform:none;visibility:visible}
+.open{overflow:hidden}
+.drawer a{display:block;padding:13px 4px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--link);text-transform:uppercase;font-size:15px}
+.drawer a.on{color:var(--ink);font-weight:700}
+.drawer-contacts{margin-top:20px}
+.drawer-contacts a{text-transform:none;color:var(--ink);font-weight:600;border:0;padding:6px 4px}
+
+/* hero */
+.hero{background:linear-gradient(180deg,rgba(27,94,156,.55),rgba(27,94,156,.15)),url("https://almaty-travel.kz/cms/uploads/file_1428823289_599399586.jpg") center/cover,var(--sky);color:#fff;padding:28px 16px;text-align:center}
+.hero p{margin:0;font-weight:700;font-size:15px;text-transform:uppercase;text-shadow:0 1px 3px rgba(0,0,0,.4);max-width:640px;margin-inline:auto}
+.hero .sw{margin-top:10px;font-size:13px;letter-spacing:.06em}
+.hero .sw span{color:#d8ecff}
+
+/* layout */
+.wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+.side{display:none}
+.main{background:var(--card);margin:16px 0;padding:20px 16px;border-radius:12px;box-shadow:0 1px 3px rgba(0,0,0,.06);min-width:0}
+h1{font-size:24px;line-height:1.25;margin:0 0 16px;color:var(--ink)}
+.content h2{font-size:19px;margin:24px 0 10px;text-align:left}
+.content p{margin:0 0 12px}
+.content img{display:block;margin:12px auto}
+.content div{max-width:100%}
+
+/* cards */
+.cards{display:grid;gap:12px}
+.card{display:block;border:1px solid var(--line);border-radius:12px;padding:16px;text-decoration:none;color:var(--ink);background:#fff}
+.card h3{margin:0 0 6px;color:var(--link);font-size:18px}
+.card p{margin:0 0 8px;color:var(--muted);font-size:15px}
+.more{font-weight:600;font-size:14px;color:var(--link);text-decoration:none}
+
+/* galleries */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:12px 0}
+.grid a{display:block;aspect-ratio:4/3;overflow:hidden;border-radius:8px;background:var(--sky)}
+.grid img{width:100%;height:100%;object-fit:cover;margin:0;border-radius:0}
+.album{margin-bottom:24px}
+.album h2{margin:0 0 4px;font-size:18px}
+.pager{color:var(--muted);font-size:14px}
+
+/* home */
+.video{position:relative;aspect-ratio:16/9;margin:0 0 16px;border-radius:12px;overflow:hidden;background:#000}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.promo{display:grid;gap:10px;margin:0 0 20px}
+
+/* buttons, form */
+.btn{display:block;text-align:center;background:var(--green);color:#fff;font-weight:700;padding:14px 18px;border-radius:10px;border:0;font-size:16px;text-decoration:none;cursor:pointer;width:100%}
+.btn.ghost{background:#fff;color:var(--blue);border:2px solid var(--blue)}
+.form label{display:block;font-size:14px;font-weight:600;margin:0 0 14px}
+.form input,.form textarea{display:block;width:100%;margin-top:6px;padding:12px;font:inherit;border:1px solid #c5d3e0;border-radius:8px;background:#fff}
+.form input:focus,.form textarea:focus{outline:2px solid var(--link);border-color:transparent}
+.err{color:#c62828;font-weight:600}
+.note{color:var(--muted);font-size:13px;text-align:center}
+
+/* reviews */
+.reviews{margin-top:28px;border-top:1px solid var(--line);padding-top:16px}
+.gcard{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.rate{font-weight:700;color:#e3a400}
+
+/* footer */
+.ftr{background:#1d2733;color:#c9d4df;padding:24px 16px 90px;font-size:14px}
+.ftr nav{display:flex;flex-wrap:wrap;gap:8px 16px;margin-bottom:16px}
+.ftr a{color:#fff;text-decoration:none}
+.ftr .contacts a{display:block;padding:4px 0}
+.copy{margin:16px 0 0;color:#8a99a8}
+
+/* whatsapp */
+.wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));width:56px;height:56px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,.25);z-index:10}
+.wa svg{width:30px;height:30px}
+
+/* desktop */
+@media (min-width:900px){
+  .burger,.drawer{display:none}
+  .topbar,.bar,.tabs{max-width:1100px;margin:0 auto}
+  .tabs{border:0;justify-content:flex-end;gap:6px;padding:0 16px 8px}
+  .tabs a{flex:0 0 auto;padding:10px 18px;border-radius:8px;background:linear-gradient(#f4f9ff,#dcebf8)}
+  .hero{padding:56px 16px}
+  .hero p{font-size:18px}
+  .wrap{display:grid;grid-template-columns:240px 1fr;gap:24px}
+  .side{display:block;padding-top:16px}
+  .side a{display:block;padding:10px 0;text-transform:uppercase;font-size:14px;text-decoration:none;border-bottom:1px solid var(--line)}
+  .side a.on{color:var(--ink);font-weight:700}
+  .main{padding:28px 32px}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .promo{grid-template-columns:1fr 1fr}
+  .ftr{padding-bottom:32px}
+  .ftr>*{max-width:1100px;margin-inline:auto}
+}
+.content img[src*="WhatsApp"],.content img[src*="instagram"]{display:inline;width:24px;margin:0 6px 0 0;vertical-align:middle;border-radius:0}
+.demo{background:#fff6cc;color:#5a4a00;font-size:12px;text-align:center;padding:4px 16px}
+.demo a{color:#5a4a00}

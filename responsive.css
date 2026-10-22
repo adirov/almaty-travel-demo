@@ -19,13 +19,13 @@
   #top_menu1, #top_menu2, #top_menu3 { position: static; width: auto; height: auto; flex: 1; padding: 14px 4px; }
   #top_menu a { font-size: 14px; }
   h1 { font-size: 20px; line-height: 1.25; }
-  #content img { max-width: 100% !important; height: auto !important; }
-  #content iframe { max-width: 100%; }
-  #content iframe[src*='youtube'] { width: 100%; height: auto; aspect-ratio: 460 / 259; }
-  #content table { max-width: 100%; width: 100% !important; table-layout: fixed; }
-  #content td { overflow-wrap: anywhere; }
-  #content input, #content textarea, #content select { box-sizing: border-box; max-width: 100%; font-size: 16px; }
-  #content input[type='button'], #content input[type='submit'] { min-height: 44px; padding: 8px 16px; }
+  .main_container img { max-width: 100% !important; height: auto !important; }
+  .main_container iframe { max-width: 100%; }
+  .main_container iframe[src*='youtube'] { width: 100%; height: auto; aspect-ratio: 460 / 259; }
+  .main_container table { max-width: 100%; width: 100% !important; table-layout: fixed; }
+  .main_container td { overflow-wrap: anywhere; }
+  .main_container input, .main_container textarea, .main_container select { box-sizing: border-box; max-width: 100%; font-size: 16px; }
+  .main_container input[type='button'], .main_container input[type='submit'] { min-height: 44px; padding: 8px 16px; }
   #sideLeft { display: contents; }
   #left_menu { order: 1; margin: 0 16px 16px; font-size: 13px; }
   #left_menu tbody { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
